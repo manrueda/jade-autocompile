@@ -2,7 +2,6 @@
 
 Auto compile JADE files on save
 
----
 ## Configuration
 The two first comment blocks of file can be used to pass parameters to the compiler.
 
@@ -25,4 +24,4 @@ The two first comment blocks of file can be used to pass parameters to the compi
     }
   ```
 ## License
-(MIT)[LICENSE]
+[MIT](LICENSE)
