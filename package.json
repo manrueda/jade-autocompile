@@ -13,7 +13,12 @@
   "keywords": [
     "jade",
     "compiler",
-    "save"
+    "compile",
+    "save",
+    "auto",
+    "autocompiler",
+    "autocompile",
+    "html"
   ],
   "author": "Manuel Rueda",
   "license": "MIT",

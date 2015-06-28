@@ -2,6 +2,8 @@
 
 Auto compile JADE files on save
 
+[Atom package site](https://atom.io/packages/jade-autocompile)
+
 ## Configuration
 The two first comment blocks of file can be used to pass parameters to the compiler.
 
