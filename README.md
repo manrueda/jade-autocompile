@@ -10,15 +10,20 @@ The two first comment blocks of file can be used to pass parameters to the compi
 * The first one must have the name of the output html file, like this:
 
   ```jade
-  //compile:output.html
+  //output:output.html
   ```
   If you avoid this comment, the file is omitted by the compiler.
+
+  Also you can add other properties to the compiler, like this:
+  ```jade
+  //output:output.html, pretty:false
+  ```
 
 * The second block can have a javascript object to be used as locals for the compiler.
 
   ```jade
   //{
-      name: 'Manuel'
+      name: 'Manuel',
       date: new Date,
       myFunc: function(){
         return true;
