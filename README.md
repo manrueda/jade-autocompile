@@ -1,4 +1,4 @@
-# jade-autocompile package
+# jade-autocompile package [![Build Status](https://travis-ci.org/ManRueda/jade-autocompile.svg?branch=master)](https://travis-ci.org/ManRueda/jade-autocompile)
 
 Auto compile JADE files on save
 
