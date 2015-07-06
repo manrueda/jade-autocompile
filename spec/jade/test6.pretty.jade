@@ -1,0 +1,23 @@
+//output:test6.pretty.html
+//{
+    var1: 'Holaaaa',
+    iAmANumber: 33.5,
+    iAmAnObject: {
+      andIAmAnArray: [44, 'Chauuu'],
+      iAmANumber: 99
+    },
+    iAmAFunction: function(a){
+      return a + 5;
+    }
+  }
+html
+  div
+    label=var1
+  label=iAmANumber
+  div
+    span=iAmAFunction(4)
+    //this comment must not 'joder'
+  section
+    span=iAmAnObject.andIAmAnArray
+    span=iAmAnObject.iAmANumber
+    
