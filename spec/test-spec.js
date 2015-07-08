@@ -135,4 +135,21 @@ describe('jade-autocompile module', function() {
 
   });
 
+  it('compile a simple JADE but with some JS inside', function(done) {
+    var flag;
+    runs(function() {
+      runTest.call(this, compiler, 'jade/test7.jade', 'jade/test7.html', function(err, data) {
+        expect(err).toBeNull();
+        expect(data).toEqual('<html><head><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.js"></script><script type="text/javascript" src="js/multi-loader.js"></script><script type="text/javascript">//call the loader with the JSON path and the root to create the URLs // return a promise\nloadModules(\'main\', \'/\').then(function(modules){\n  //log all the modules to load\n  console.log(modules);\n}).catch(function(err){\n  //catch the errors\n  console.warn(err);\n});</script></head><body></body></html>');
+        flag = true;
+      });
+
+    });
+
+    waitsFor(function() {
+      return flag;
+    });
+
+  });
+
 });

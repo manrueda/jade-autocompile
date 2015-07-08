@@ -1,0 +1,15 @@
+//output:test7.html, pretty:false
+html
+  head
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.js")
+    script(type="text/javascript" src="js/multi-loader.js")
+    script(type="text/javascript").
+      //call the loader with the JSON path and the root to create the URLs // return a promise
+      loadModules('main', '/').then(function(modules){
+        //log all the modules to load
+        console.log(modules);
+      }).catch(function(err){
+        //catch the errors
+        console.warn(err);
+      });
+  body
