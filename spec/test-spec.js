@@ -152,4 +152,22 @@ describe('jade-autocompile module', function() {
 
   });
 
+
+    it('compile a simple JADE but with one inserted jade', function(done) {
+      var flag;
+      runs(function() {
+        runTest.call(this, compiler, 'jade/test8.jade', 'jade/test8.html', function(err, data) {
+          expect(err).toBeNull();
+          expect(data).toEqual('\n<html>\n  <head></head>\n  <body>\n    <div><a>This is a partial!<span>true</span></a></div><span>Manuel</span>\n  </body>\n</html>');
+          flag = true;
+        });
+
+      });
+
+      waitsFor(function() {
+        return flag;
+      });
+
+    });
+
 });
