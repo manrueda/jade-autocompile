@@ -1,0 +1,21 @@
+//output:attributes.html
+//{
+    authenticated: true,
+    styles: {color: 'red', background: 'green'},
+    classes: ['foo', 'bar', 'baz'],
+    attributes: {'data-foo': 'bar'},
+    aList: ["Uno", "Dos", "Tres","Cuatro", "Cinco", "Seis"]}
+doctype html
+html
+  head
+  body
+    a(class='button', href='google.com') Google
+    span(class=authenticated ? 'authed' : 'anon')
+    input(type='checkbox', checked=true)
+    a(style=styles)
+    input&attributes(attributes)(
+      type='checkbox'
+      name='agreement'
+      checked
+    )
+    a#classes(class=classes)

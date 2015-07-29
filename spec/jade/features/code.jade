@@ -1,0 +1,25 @@
+//output:code.html
+//{
+    authenticated: true,
+    friends: 10,
+    aList: ["Uno", "Dos", "Tres","Cuatro", "Cinco", "Seis"]
+  }
+doctype html
+html
+  head
+  body
+    case friends
+      when 0
+        p you have no friends
+      when 1
+        p you have a friend
+      default
+        p you have #{friends} friends
+    ul
+      each item in aList
+        li= item
+    span= authenticated.toString() + friends.toString()
+    if authenticated
+      h2 Authenticated
+    else
+      h2 Not Authenticated

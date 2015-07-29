@@ -1,0 +1,13 @@
+//output:mixin.html
+doctype html
+html
+  head
+  body
+    mixin item(text)
+      li= text
+        
+    mixin list(...items)
+      ul
+        each item in items
+          +item(item)
+    +list(1,2,3,4,5,6)
