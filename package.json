@@ -27,10 +27,10 @@
   },
   "homepage": "https://github.com/ManRueda/jade-autocompile#readme",
   "dependencies": {
-    "atom-space-pen-views": "^2.0.5",
-    "domify": "^1.3.3",
-    "jade": "^1.11.0",
-    "loophole": "^1.0.0",
-    "merge": "^1.2.0"
+    "atom-space-pen-views": "2.1.0",
+    "domify": "1.4.0",
+    "jade": "1.11.0",
+    "loophole": "1.1.0",
+    "merge": "1.2.0"
   }
 }
