@@ -14,6 +14,10 @@ The two first comment blocks of file can be used to pass parameters to the compi
   ```
   If you avoid this comment, the file is omitted by the compiler.
 
+  The output parameter supports relatives paths and two variables replacement.
+  * $1: Name of the original jade file
+  * $2: Extension of the original file.
+
   Also you can add other properties to the compiler, like this:
   ```jade
   //output:output.html, pretty:false
