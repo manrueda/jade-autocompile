@@ -1,6 +1,6 @@
 {
   "name": "jade-autocompile",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Jade autocompiler for Atom.io",
   "main": "./lib/jade-autocompile.js",
   "engines": {
