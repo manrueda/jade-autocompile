@@ -157,6 +157,20 @@ describe('jade-autocompile module', function() {
     });
   });
 
+  it('compile a simple JADE but with one inserted jade using name variables', function(done) {
+    var flag;
+    runs(function() {
+      compileJade.call(this, compiler, 'jade/test9.jade', 'jade/test9.html', function(err, data) {
+        expect(err).toBeNull();
+        expect(data).toEqual('\n<html>\n  <head></head>\n  <body>\n    <div><a>This is a partial!<span>true</span></a></div><span>Manuel</span>\n  </body>\n</html>');
+        flag = true;
+      });
+    });
+    waitsFor(function() {
+      return flag;
+    });
+  });
+
   it('compile a simple JADE to test Attributes', function(done) {
     var flag;
     runs(function() {
@@ -247,11 +261,13 @@ describe('jade-autocompile module', function() {
 function compileJade(compiler, file, output, cb) {
   compiler.filePath = path.join(__dirname, file);
   compiler.fileExt = '.jade';
-  compiler.compile(function() {
-    fs.readFile(path.join(__dirname, output), {
-      encoding: 'utf-8'
-    }, function readFile(err, data) {
-      cb(err, data);
+  compiler.compile(path.join(__dirname, file), function(_jade, options) {
+    compiler.saveJade(path.join(__dirname, file), _jade, options.output, function(){
+      fs.readFile(path.join(__dirname, output), {
+        encoding: 'utf-8'
+      }, function readFile(err, data) {
+        cb(err, data);
+      });
     });
   });
 }
