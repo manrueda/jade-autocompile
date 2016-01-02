@@ -261,7 +261,9 @@ describe('jade-autocompile module', function() {
 function compileJade(compiler, file, output, cb) {
   compiler.filePath = path.join(__dirname, file);
   compiler.fileExt = '.jade';
-  compiler.compile(path.join(__dirname, file), function(_jade, options) {
+  compiler.compile(path.join(__dirname, file), function(err, _jade, options) {
+    if (err)
+      cb(err);
     compiler.saveJade(path.join(__dirname, file), _jade, options.output, function(){
       fs.readFile(path.join(__dirname, output), {
         encoding: 'utf-8'
