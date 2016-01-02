@@ -1,4 +1,5 @@
-# jade-autocompile package [![Build Status](https://travis-ci.org/ManRueda/jade-autocompile.svg?branch=master)](https://travis-ci.org/ManRueda/jade-autocompile)
+# jade-autocompile package [![Build Status](https://travis-ci.org/ManRueda/jade-autocompile.svg?branch=master)](https://travis-ci.org/ManRueda/jade-autocompile) [![apm](https://img.shields.io/apm/dm/jade-autocompile.svg)](https://atom.io/packages/jade-autocompile) [![apm](https://img.shields.io/apm/v/jade-autocompile.svg)](https://atom.io/packages/jade-autocompile)
+
 
 Auto compile JADE files on save
 
