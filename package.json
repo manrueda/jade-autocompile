@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ManRueda/jade-autocompile#readme",
   "dependencies": {
-    "atom-space-pen-views": "2.1.0",
+    "atom-space-pen-views": "2.1.1",
     "domify": "1.4.0",
     "jade": "1.11.0",
     "loophole": "1.1.0",
