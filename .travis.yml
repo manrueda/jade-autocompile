@@ -19,6 +19,10 @@ script:
   - chmod u+x build-package.sh
   - ./build-package.sh
 
+group: stable
+
+dist: osx
+
 notifications:
   email:
     on_success: never
