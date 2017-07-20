@@ -35,9 +35,6 @@ The two first comment blocks of file can be used to pass parameters to the compi
       }
     }
   ```
-## About this Package
-
-This package was forked from jade-autocompile Atom extension by Manuel Rueda: https://github.com/ManRueda/jade-autocompile
   
 ## License
   The MIT License (MIT)
